@@ -118,6 +118,23 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+
+         {/* Google Ads Tag */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17619132152"
+        ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17619132152');
+            `,
+          }}
+        />
       </head>
       <body>
         {children}
