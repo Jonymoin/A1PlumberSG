@@ -23,7 +23,7 @@ import { posts } from "@/lib/blog";
 import { reviews } from "@/lib/reviews";
 import { services } from "@/lib/services";
 import { site } from "@/lib/site";
-import { tips } from "@/lib/tips";
+import { tips } from "@/lib/tips"
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -141,28 +141,39 @@ function Home() {
 
       {/* Why choose us */}
       <section className="section-y">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="Why choose us"
-            title="Why homeowners call A1PlumberSG back"
-            center
+  <div className="container-page">
+    <SectionHeading
+      eyebrow="Why choose us"
+      title="Why homeowners call A1PlumberSG back"
+      center
+    />
+
+    <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {whyChooseUs.map((w) => (
+        <div
+          key={w.title}
+          className="group relative overflow-hidden text-lime rounded-2xl border border-white/55 bg-[#011936] group-hover:text-black p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.75),var(--shadow-soft)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/80 hover:bg-card/80 dark:border-white/10 dark:bg-card/45 dark:hover:bg-card/60"
+        >
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 opacity-80"
           />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {whyChooseUs.map((w) => (
-              <div
-                key={w.title}
-                className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)] transition-transform duration-300 hover:-translate-y-1"
-              >
-                <span className="flex size-11 items-center justify-center rounded-xl bg-primary/20">
-                  <w.icon className="size-5" aria-hidden="true" />
-                </span>
-                <h3 className="mt-4 text-base font-semibold">{w.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.text}</p>
-              </div>
-            ))}
-          </div>
+
+          <span className="relative z-10 flex size-11 items-center justify-center rounded-xl border border-lime bg-primary text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-md">
+            <w.icon className="size-5" aria-hidden="true" />
+          </span>
+
+          <h3 className="relative z-10 mt-4 text-base font-semibold">
+            {w.title}
+          </h3>
+          <p className="relative z-10 mt-2 text-sm leading-relaxed text-white hover:text-black">
+            {w.text}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* How it works */}
       <section className="section-y bg-[var(--surface)]">
@@ -240,10 +251,10 @@ function Home() {
             {tips.slice(0, 3).map((t) => (
               <div
                 key={t.title}
-                className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-soft)]"
+                className="rounded-2xl border border-border text-white bg-[#081c2d] p-6 shadow-[var(--shadow-soft)]"
               >
-                <h3 className="text-base font-semibold">{t.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t.text}</p>
+                <h3 className="text-base  font-semibold">{t.title}</h3>
+                <p className="mt-2 text-sm text-white leading-relaxed">{t.text}</p>
               </div>
             ))}
           </div>

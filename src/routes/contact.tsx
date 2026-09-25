@@ -12,7 +12,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact A1PlumberSG for plumbing help anywhere in Singapore. Call +65 8413 0016, WhatsApp us or email a1plumber@gmail.com.",
+          "Contact A1PlumberSG for plumbing help anywhere in Singapore. Call +65 8413 0016, WhatsApp us or email a1plumbersg@gmail.com.",
       },
       { property: "og:title", content: "Contact A1PlumberSG | Plumbing Services Singapore" },
       {

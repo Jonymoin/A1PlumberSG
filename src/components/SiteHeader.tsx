@@ -19,14 +19,16 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/85 backdrop-blur-md">
       <div className="container-page flex h-17 items-center justify-between gap-4">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-            <Wrench className="size-5" aria-hidden="true" />
-          </span>
-          <span className="font-display text-lg font-extrabold tracking-tight">
-            A1Plumber<span className="text-muted-foreground">SG</span>
-          </span>
-        </Link>
+       <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+  <img
+    src="/images/logoa1.png"
+    alt=""
+    className="size-9 shrink-0 object-contain"
+  />
+  <span className="font-display text-lg font-extrabold tracking-tight">
+    A1Plumber<span className="text-muted-foreground">SG</span>
+  </span>
+</Link>
 
         <nav aria-label="Main" className="hidden items-center gap-1 lg:flex">
           {nav.map((item) => (

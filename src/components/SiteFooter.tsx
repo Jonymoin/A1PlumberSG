@@ -10,7 +10,11 @@ export function SiteFooter() {
         <div className="md:col-span-1">
           <div className="flex items-center gap-2">
             <span className="flex size-9 items-center justify-center rounded-xl bg-primary text-primary-foreground">
-              <Wrench className="size-5" aria-hidden="true" />
+               <img
+    src="/images/logoa1.png"
+    alt=""
+    className="size-9 shrink-0 object-contain"
+  />
             </span>
             <span className="font-display text-lg font-extrabold">A1PlumberSG</span>
           </div>
